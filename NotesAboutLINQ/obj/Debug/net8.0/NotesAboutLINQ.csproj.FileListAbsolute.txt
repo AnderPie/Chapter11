@@ -1,0 +1,15 @@
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\bin\Debug\net8.0\NotesAboutLINQ.exe
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\bin\Debug\net8.0\NotesAboutLINQ.deps.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\bin\Debug\net8.0\NotesAboutLINQ.runtimeconfig.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\bin\Debug\net8.0\NotesAboutLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\bin\Debug\net8.0\NotesAboutLINQ.pdb
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.AssemblyInfoInputs.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.AssemblyInfo.cs
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.csproj.CoreCompileInputs.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.sourcelink.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\refint\NotesAboutLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.pdb
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\NotesAboutLINQ.genruntimeconfig.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\NotesAboutLINQ\obj\Debug\net8.0\ref\NotesAboutLINQ.dll
