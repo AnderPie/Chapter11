@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Northwind.EntityModels;
-using Microsoft.EntityFrameworkCore; // To use DbSet<T>
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens; // To use DbSet<T>
 
 partial class Program
 {
@@ -132,7 +133,61 @@ partial class Program
          * select the part of each item that will be the value. You can learn more 
          * at the following link: https://learn.Microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolookup
          */
+    }
+    private static void AggregateProducts()
+    {
+        SectionTitle("Aggregate products");
+        using NorthwindDb db = new();
 
+        // Try to get an efficient count from EF Core DbSet<T>
+        SectionTitle("Try to get an efficient count from EF Core DbSet<T>");
+        if (db.Products.TryGetNonEnumeratedCount(out int countDbSet))
+        {
+            WriteLine($"{"Product count from DbSet: ",-25} {countDbSet,10}");
+        }
+        else
+        {
+            WriteLine($"Products DbSet does not have a Count property");
+        }
+
+        // Try to get an efficient count from a list<T>
+        SectionTitle("Try to get an efficient count from List<T>");
+
+        List<Product> products = db.Products.ToList();
+
+        if (products.TryGetNonEnumeratedCount(out int countList))
+        {
+            WriteLine($"{"Product count from list:",-25} {countList,10}");
+        }
+        else
+        {
+            WriteLine("Products list does not have a Count property");
+        }
+
+        WriteLine($"{"Product count from DbSet: ",-25} {db.Products.Count(),10}");
+
+        WriteLine($"{"Discontinued product count:",-27} {db.Products.Where(p => p.Discontinued).Count(),8}");
+
+        // Mark makes great console tables, and I gotta be real, the {someInterpolatable,xPosition} syntax looks so foreign to me
+        // Just inexperience really
+
+        // I really like the lambda functionality for IQueryable interface.
+
+        WriteLine($"{"Highest product price:",-25} {db.Products.Max(p => p.UnitPrice)}");
+
+        WriteLine($"{"Average units in stock:",-25} {db.Products.Average(p => p.UnitsInStock)}");
+        // Hey you 
+        // Implement me tomorrow or you're a coward.
+        // I mean it
+        //
+
+        //Why not today?
+        // Coward!
+        // Ok ok **** you I'll implement the **** function. Thank you.
+        // No, thank you <3
+        //
+        //Good job writing what you did. Get it to run then push. Finish tomorrow!
+        //Top of page 615
 
     }
 }

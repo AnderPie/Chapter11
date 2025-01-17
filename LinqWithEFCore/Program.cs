@@ -1,4 +1,6 @@
-﻿ConfigureConsole();
+﻿AggregateProducts();
+
+ConfigureConsole();
 ProductsLookup();
 GroupJoinCategoriesAndProducts();
 //FilterAndSort();
