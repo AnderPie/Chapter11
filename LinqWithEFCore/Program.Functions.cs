@@ -72,6 +72,7 @@ partial class Program
     {
         SectionTitle("Group join categories and products");
         using NorthwindDb db = new();
+
         // Group all products by their category to return 8 matches
         var queryGroup = db.Categories.AsEnumerable().GroupJoin(
             inner: db.Products,
@@ -140,7 +141,7 @@ partial class Program
         using NorthwindDb db = new();
 
         // Try to get an efficient count from EF Core DbSet<T>
-        SectionTitle("Try to get an efficient count from EF Core DbSet<T>");
+        WriteLine("Try to get an efficient count from EF Core DbSet<T>");
         if (db.Products.TryGetNonEnumeratedCount(out int countDbSet))
         {
             WriteLine($"{"Product count from DbSet: ",-25} {countDbSet,10}");
@@ -151,13 +152,13 @@ partial class Program
         }
 
         // Try to get an efficient count from a list<T>
-        SectionTitle("Try to get an efficient count from List<T>");
+        WriteLine("Try to get an efficient count from List<T>");
 
         List<Product> products = db.Products.ToList();
 
         if (products.TryGetNonEnumeratedCount(out int countList))
         {
-            WriteLine($"{"Product count from list:",-25} {countList,10}");
+            WriteLine($"{"Product count from list:",-25} {countList,11}");
         }
         else
         {
@@ -173,21 +174,18 @@ partial class Program
 
         // I really like the lambda functionality for IQueryable interface.
 
-        WriteLine($"{"Highest product price:",-25} {db.Products.Max(p => p.UnitPrice)}");
+        WriteLine($"{"Highest product price:",-25} {db.Products.Max(p => p.UnitPrice),10:$#,##0.00}");
 
         WriteLine($"{"Average units in stock:",-25} {db.Products.Average(p => p.UnitsInStock)}");
-        // Hey you 
-        // Implement me tomorrow or you're a coward.
-        // I mean it
-        //
 
-        //Why not today?
-        // Coward!
-        // Ok ok **** you I'll implement the **** function. Thank you.
-        // No, thank you <3
-        //
-        //Good job writing what you did. Get it to run then push. Finish tomorrow!
-        //Top of page 615
+        WriteLine($"{"Sum of units in stock:",-25} {db.Products.Sum(p=>p.UnitsInStock),10:N0}");
+        WriteLine($"{"Sum of units on order:",-25} {db.Products.Sum(p=>p.UnitsOnOrder),10:N0}");
+        decimal? highestUnitValue = db.Products.Max(p => p.UnitPrice * p.UnitsInStock);
+        // In ties, winner is arbitrary based on how IQueryable was sorted last
+        Product highestValueProduct = db.Products.Where(p => p.UnitPrice * p.UnitsInStock == highestUnitValue).First();
+        WriteLine($"{"Value of units in stock: ",-25} {db.Products.Sum(p=>p.UnitPrice*p.UnitsInStock),10:$#,##0.00}");
+        WriteLine($"{"Name of product with most value in stock: ",-25} {highestValueProduct.ProductName}");
+        WriteLine($"{"Value of product with most value in stock: ",-25} {highestValueProduct.UnitsInStock * highestValueProduct.UnitPrice,10:$#,##0.00}");
 
     }
 }
