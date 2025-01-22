@@ -1,4 +1,5 @@
-﻿ConfigureConsole();
+﻿PagingProducts();
+ConfigureConsole();
 AggregateProducts();
 ProductsLookup();
 GroupJoinCategoriesAndProducts();
