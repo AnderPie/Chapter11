@@ -15,14 +15,14 @@ partial class Program
         SectionTitle("Filter and sort");
         using NorthwindDb db = new();
         DbSet<Product> allProducts = db.Products;
-
+        
         IQueryable<Product> filteredProducts = allProducts.Where(product =>
             product.UnitPrice < 10M);
-
-        // Learn more about projection operations at learn.microsoft.com/en-us/dotnet/
+        
         // csharp/programming-guide/concepts/linq/projection-operations
-        IOrderedQueryable<Product> sortedAndFilteredProducts =
+        IOrderedQueryable <Product> sortedAndFilteredProducts =
             filteredProducts.OrderByDescending(product => product.UnitPrice);
+
         var projectedProducts = sortedAndFilteredProducts.Select(product => new
         { // Anonymously typed object
             product.ProductID,

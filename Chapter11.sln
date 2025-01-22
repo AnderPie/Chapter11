@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesAboutLINQ", "NotesAbou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqWithEFCore", "LinqWithEFCore\LinqWithEFCore.csproj", "{DE2DB5AD-5929-4151-A480-26DBCA6B3FCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch11Ex02LinqQueries", "Ch11Ex02LinqQueries\Ch11Ex02LinqQueries.csproj", "{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DE2DB5AD-5929-4151-A480-26DBCA6B3FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2DB5AD-5929-4151-A480-26DBCA6B3FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2DB5AD-5929-4151-A480-26DBCA6B3FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
