@@ -7,6 +7,8 @@ using Northwind.EntityModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore.Query; // To use DbSet<T>
+using System.Xml.Linq;
+using System.Xml; // For use in converting Products to XML
 
 partial class Program
 {
@@ -15,12 +17,12 @@ partial class Program
         SectionTitle("Filter and sort");
         using NorthwindDb db = new();
         DbSet<Product> allProducts = db.Products;
-        
+
         IQueryable<Product> filteredProducts = allProducts.Where(product =>
             product.UnitPrice < 10M);
-        
+
         // csharp/programming-guide/concepts/linq/projection-operations
-        IOrderedQueryable <Product> sortedAndFilteredProducts =
+        IOrderedQueryable<Product> sortedAndFilteredProducts =
             filteredProducts.OrderByDescending(product => product.UnitPrice);
 
         var projectedProducts = sortedAndFilteredProducts.Select(product => new
@@ -79,7 +81,10 @@ partial class Program
             inner: db.Products,
             outerKeySelector: category => category.CategoryID,
             innerKeySelector: product => product.CategoryID,
-            resultSelector: (c, matchingProducts) => new { c.CategoryName, Products = matchingProducts.OrderBy(p => p.ProductName)
+            resultSelector: (c, matchingProducts) => new
+            {
+                c.CategoryName,
+                Products = matchingProducts.OrderBy(p => p.ProductName)
             });
         foreach (var c in queryGroup)
         {
@@ -208,7 +213,8 @@ partial class Program
      * This function paginates an Iqueryable<Product> using LINQ. It outputs the SQL
      * from the pages we generate, passing the results into an array of products
      */
-    private static void OutputPageOfProducts(IQueryable<Product> products, int pageSize, int currentPage, int totalPages){
+    private static void OutputPageOfProducts(IQueryable<Product> products, int pageSize, int currentPage, int totalPages)
+    {
         /*
          * We must order data before skipping and taking to ensure the data is not randomly sorted in each page.
          */
@@ -247,5 +253,42 @@ partial class Program
         }
     }
 
+    private static void OutPutProductsAsXML()
+    {
+        SectionTitle("Output products as XML");
+        using NorthwindDb db = new();
+        Product[] productArray = db.Products.ToArray();
+        XElement xml = new("products",
+            from p in productArray
+            select new XElement("product",
+                new XAttribute("id", p.ProductID),
+                new XAttribute("price", p.UnitPrice ?? 0),
+                new XElement("name", p.ProductName)));
+        WriteLine(xml.ToString());
+    }
 
+    /*
+     * This method completes the following tasks:
+     *      Load the XML file
+     *      Use LINQ to XML to search for an element named appSettings and its descendants named add.
+     *      Enumerate through the array to show the results
+     */
+    static void ProcessSettings()
+    {
+        string path = Path.Combine(Environment.CurrentDirectory, "settings.xml");
+        WriteLine($"Settings file path: {path}");
+        XDocument doc = XDocument.Load(path);
+
+        var appSettings = doc.Descendants("appSettings")
+            .Descendants("add")
+            .Select(node => new
+            {
+                Key = node.Attribute("key")?.Value,
+                Value = node.Attribute("value")?.Value
+            }).ToArray();
+        foreach (var item in appSettings)
+        {
+            WriteLine($"{item.Key}: {item.Value}");
+        }
+    }
 }

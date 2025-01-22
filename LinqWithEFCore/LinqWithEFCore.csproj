@@ -14,4 +14,9 @@
 		<PackageReference Version="8.0.0" Include="Microsoft.EntityFrameworkCore.SQlite" />
 		<PackageReference Version="5.1.1" Include="Microsoft.Data.SqlClient" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Settings.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 </Project>

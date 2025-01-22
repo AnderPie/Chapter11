@@ -1,4 +1,6 @@
-﻿PagingProducts();
+﻿ProcessSettings();
+OutPutProductsAsXML();
+PagingProducts();
 ConfigureConsole();
 AggregateProducts();
 ProductsLookup();

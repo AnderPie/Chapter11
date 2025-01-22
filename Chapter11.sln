@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqWithEFCore", "LinqWithE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch11Ex02LinqQueries", "Ch11Ex02LinqQueries\Ch11Ex02LinqQueries.csproj", "{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParellelLINQ", "ParellelLINQ\ParellelLINQ.csproj", "{9EC7208D-A413-4EA7-BD80-A6664BABE80C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49329B80-DE82-4D0A-BFEA-58FA2E5E8644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC7208D-A413-4EA7-BD80-A6664BABE80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC7208D-A413-4EA7-BD80-A6664BABE80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC7208D-A413-4EA7-BD80-A6664BABE80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC7208D-A413-4EA7-BD80-A6664BABE80C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

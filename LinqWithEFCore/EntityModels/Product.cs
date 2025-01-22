@@ -17,7 +17,7 @@ namespace Northwind.EntityModels
         public int? SupplierID { get; set; }
         public int? CategoryID { get; set; }
         [StringLength(20)]
-        public string? QuantityPerUnit { get; set; }-
+        public string? QuantityPerUnit { get; set; }
         // Required for SQL Server provider.
         [Column(TypeName="money")]
         public decimal? UnitPrice { get; set; }

@@ -1,0 +1,15 @@
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\bin\Debug\net8.0\ParellelLINQ.exe
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\bin\Debug\net8.0\ParellelLINQ.deps.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\bin\Debug\net8.0\ParellelLINQ.runtimeconfig.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\bin\Debug\net8.0\ParellelLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\bin\Debug\net8.0\ParellelLINQ.pdb
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.AssemblyInfoInputs.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.AssemblyInfo.cs
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.csproj.CoreCompileInputs.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.sourcelink.json
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\refint\ParellelLINQ.dll
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.pdb
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ParellelLINQ.genruntimeconfig.cache
+C:\Users\fuzzy\Desktop\csdotnet\Chapter11\ParellelLINQ\obj\Debug\net8.0\ref\ParellelLINQ.dll
